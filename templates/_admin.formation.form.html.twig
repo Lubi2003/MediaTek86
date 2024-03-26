@@ -23,7 +23,7 @@
     {{ form_end(formFormation) }}
     {% if formation.id != null %}
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <a href="{{ path('admin.formation.edit', {id:formation.id }) }}" class="btn btn-warning me-md-2">
+            <a href="{{ path('admin.formation.edit', {id:formation.id }) }}" class="btn btn-primary me-md-2">
                 Annuler
             </a>
             <a href="{{ path('admin.formation.suppr', {id:formation.id }) }}" 
