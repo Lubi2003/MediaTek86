@@ -110,6 +110,6 @@ Le chemin des images (des 2 tailles) n'est pas mémorisé dans la BDD car il peu
 - Télécharger le code et le dézipper dans www de Wampserver (ou dossier équivalent) puis renommer le dossier en "mediatekformation".
 - Ouvrir une fenêtre de commandes en mode admin, se positionner dans le dossier du projet et taper "composer install" pour reconstituer le dossier vendor.
 - Récupérer le fichier mediatekformation.sql en racine du projet et l'utiliser pour créer la BDD MySQL "mediatekformation" en root sans pwd (si vous voulez mettre un login/pwd d'accès, il faut le préciser dans le fichier ".env" en racine du projet).
-- # De préférence, ouvrir l'application dans un IDE professionnel. L'adresse pour la lancer est : http://localhost/mediatekformation/public/index.php
+- # De préférence, ouvrir l'application dans un IDE professionnel (Visual Studio Code dans mon cas). L'adresse pour la lancer est : http://127.0.0.1:8000/
 
 # MediaTek86
