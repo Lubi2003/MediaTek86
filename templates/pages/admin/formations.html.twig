@@ -10,7 +10,7 @@
             {{ message }}
         </div>
     {% endfor %}
-    <p class="text-end">
+    <p class="text-end mt-3">
         <a href="{{ path('admin.formation.ajout') }}" class="btn btn-secondary">
             Ajouter une formation
         </a>
@@ -77,7 +77,7 @@
             {% for formation in formations %}
                 <tr class="align-middle">
                     <td>
-                        <h5 class="text-warning">
+                        <h5 class="text-primary">
                             {{ formation.title }}
                         </h5>
                     </td>
