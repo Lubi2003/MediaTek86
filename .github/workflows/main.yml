@@ -1,17 +1,16 @@
+on: push
 name: Deploy website on push
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout du code source
-        uses: actions/checkout@v2
-
-      - name: Exécuter une commande
-        run: echo "Hello, World!"
+  web-deploy:
+     name: Deploy
+     runs-on: ubuntu-latest
+     steps:
+     - name: Get latest code
+       uses: actions/checkout@v2
+     - name: Sync files
+       uses: SamKirkland/FTP-Deploy-Action@4.3.0
+       with:
+         server: ftp://154.56.33.57
+         server-dir: /mediatek/public/
+         username: u271805410.fox2dev.com
+         password: ${{ E66aX5JbC!u!Rm }}
