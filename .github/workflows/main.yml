@@ -11,6 +11,6 @@ jobs:
        uses: SamKirkland/FTP-Deploy-Action@4.3.0
        with:
          server: ftp://154.56.33.57
-         server-dir: /mediatek/public/
+         server-dir: /public_html/mediatek/
          username: u271805410.fox2dev.com
          password: ${{ E66aX5JbC!u!Rm }}
