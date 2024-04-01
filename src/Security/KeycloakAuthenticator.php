@@ -90,7 +90,7 @@ class KeycloakAuthenticator extends OAuth2Authenticator implements Authenticatio
         return new RedirectResponse($targetUrl);
     }
 
-    public function start(Request $request, AuthenticationException $authException = null): Response {
+    public function start(Request $request, ?AuthenticationException $authException = null): Response {
         return new RedirectResponse(
                 '/oauth/login',
                 Response::HTTP_TEMPORARY_REDIRECT
