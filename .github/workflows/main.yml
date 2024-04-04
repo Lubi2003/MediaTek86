@@ -11,7 +11,7 @@ jobs:
         with:
           username: u271805410.mediatek
           server: 154.56.33.57
-          port: 21
+          port: 22
           local_path: "./*"
           remote_path: "/public_html/mediatek"
           sftp_only: true
