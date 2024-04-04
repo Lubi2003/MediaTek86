@@ -1,18 +1,26 @@
-on: [push]
+on:
+  push:
+    branches:
+      - main
+
 name: Deploy website on push
+
 jobs:
   web-deploy:
+    name: Deploy
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Deploy file
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          username: u271805410.mediatek
+          username: debian
           server: 154.56.33.57
           port: 22
           local_path: "./*"
-          remote_path: "/public_html/mediatek"
+          remote_path: "/public_html/"
           sftp_only: true
-          password: ${{ secrets.FTP_PASSWORD }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
