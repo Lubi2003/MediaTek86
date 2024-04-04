@@ -9,7 +9,7 @@ jobs:
       - name: Deploy file
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          username: u271805410.fox2dev.com
+          username: u271805410
           server: 154.56.33.57
           port: 22
           local_path: "./*"
