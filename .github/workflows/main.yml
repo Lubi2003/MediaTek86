@@ -1,25 +1,18 @@
-on:
-  push:
-    branches:
-      - main
-
+on: [push]
 name: Deploy website on push
-
 jobs:
   web-deploy:
-    name: Deploy
     runs-on: ubuntu-latest
-
     steps:
-      - name: Get latest code
+      - name: Checkout
         uses: actions/checkout@v2
+      - name: Deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          ref: main
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: rr-net.fr
-          server-dir: /home/public_html/mediatek/
-          username: u271805410.fox2dev.com
+          username: debian
+          server: 154.56.33.57
+          port: 21
+          local_path: "./*"
+          remote_path: "/public_html/mediatek"
+          sftp_only: true
           password: ${{ secrets.FTP_PASSWORD }}
