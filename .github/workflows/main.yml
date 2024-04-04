@@ -9,7 +9,7 @@ jobs:
       - name: Deploy file
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          username: debian
+          username: u271805410.mediatek
           server: 154.56.33.57
           port: 21
           local_path: "./*"
