@@ -19,8 +19,8 @@ jobs:
         with:
           username: u271805410.fox2dev.com
           server: ftp://rr-net.fr
-          port: 21
+          port: 22
           local_path: "./*"
           remote_path: "/public_html/"
-          sftp_only: false
+          sftp_only: true
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
