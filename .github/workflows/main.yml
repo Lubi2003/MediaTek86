@@ -19,7 +19,7 @@ jobs:
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp://154.56.33.57:21
+          server: ftp://rr-net.fr
           server-dir: /public_html/mediatek/
           username: u271805410.fox2dev.com
           password: ${{ secrets.FTP_PASSWORD }}
