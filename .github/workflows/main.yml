@@ -1,16 +1,25 @@
-on: push
+on:
+  push:
+    branches:
+      - main
+
 name: Deploy website on push
+
 jobs:
   web-deploy:
     name: Deploy
     runs-on: ubuntu-latest
+
     steps:
       - name: Get latest code
         uses: actions/checkout@v2
+        with:
+          ref: main
+
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ftp://154.56.33.57
-          server-dir: /home/u271805410/domains/fox2dev.com/public_html/mediatek
+          server-dir: /home/u271805410/domains/fox2dev.com/public_html/mediatek/
           username: u271805410.fox2dev.com
           password: ${{ secrets.FTP_PASSWORD }}
